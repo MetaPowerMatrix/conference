@@ -111,11 +111,6 @@ export default function AdminPage() {
       </main>
 
       <footer className={styles.footer}>
-        <div className={styles.footerLinks}>
-          <Link href="/admin/questions/all" className={styles.footerLink}>
-            查看全部问答数据
-          </Link>
-        </div>
       </footer>
     </div>
   );
