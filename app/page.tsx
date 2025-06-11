@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import styles from './page.module.css'
+import { getUserInfo } from '@/services/api'
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({
@@ -10,6 +11,15 @@ export default function Home() {
     minutes: 0,
     seconds: 0
   })
+  const [userLoggedIn, setUserLoggedIn] = useState(false)
+
+  useEffect(() => {
+    // 检查用户是否已登录
+    const userInfo = getUserInfo()
+    if (userInfo) {
+      setUserLoggedIn(true)
+    }
+  }, [])
 
   useEffect(() => {
     const targetDate = new Date('2025-10-17T09:00:00').getTime()
@@ -67,10 +77,12 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.heroActions}>
-              <Link href="/register" className="btn">
-                立即注册
-              </Link>
-              <Link href="/conference" className="btn btn-outline">
+              {!userLoggedIn && (
+                <Link href="/register" className="btn">
+                  立即注册
+                </Link>
+              )}
+              <Link href="/conference" className="btn">
                 了解详情
               </Link>
             </div>
@@ -122,11 +134,19 @@ export default function Home() {
               <h3>论文征稿</h3>
               <p>提交学术论文、查看要求</p>
             </Link>
-            <Link href="/register" className={styles.accessCard}>
-              <div className={styles.accessIcon}>✍️</div>
-              <h3>注册报名</h3>
-              <p>在线注册参会、选择类型</p>
-            </Link>
+            {!userLoggedIn ? (
+              <Link href="/register" className={styles.accessCard}>
+                <div className={styles.accessIcon}>✍️</div>
+                <h3>注册报名</h3>
+                <p>在线注册参会、选择类型</p>
+              </Link>
+            ) : (
+              <Link href="/user/profile" className={styles.accessCard}>
+                <div className={styles.accessIcon}>👤</div>
+                <h3>个人中心</h3>
+                <p>查看个人信息、管理报名</p>
+              </Link>
+            )}
             <Link href="/schedule" className={styles.accessCard}>
               <div className={styles.accessIcon}>📅</div>
               <h3>日程管理</h3>
