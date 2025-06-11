@@ -5,10 +5,10 @@ import ContentEditor from '@/components/admin/ContentEditor';
 import { getAuthToken } from '@/services/api';
 
 // 后端API基础URL
-const API_BASE_URL = 'http://localhost:5001/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5001/api';
 
 // 项目根路径配置
-const PROJECT_ROOT_PATH = process.env.PROJECT_ROOT_PATH || '';
+const PROJECT_ROOT_PATH = process.env.NEXT_PUBLIC_PROJECT_ROOT_PATH || '';
 
 export default function ContactContentPage() {
   // 页面文件路径，使用配置的项目根路径
