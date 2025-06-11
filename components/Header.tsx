@@ -68,8 +68,8 @@ export default function Header() {
                 {userInfo.firstName || userInfo.lastName}
               </Link>
             ) : (
-              <Link href="/login" className={styles.loginButton}>
-                登录
+              <Link href="/register" className={styles.loginButton}>
+                注册
               </Link>
             )}
             <button 
