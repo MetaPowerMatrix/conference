@@ -1,0 +1,489 @@
+/* 论文表单容器 */
+.paperFormContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 论文标题 */
+.paperTitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 论文表单 */
+.paperForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 表单组 */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.formGroup input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 2px rgba(229, 62, 62, 0.2);
+}
+
+/* 文本区域 */
+.textArea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.textArea:focus {
+  outline: none;
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 2px rgba(229, 62, 62, 0.2);
+}
+
+/* 文件上传容器 */
+.fileUploadContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 文件输入组 */
+.fileInputGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.fileNameInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  cursor: default;
+}
+
+.browseButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #f7fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.browseButton:hover {
+  background-color: #edf2f7;
+}
+
+.fileHelpText {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: 0.25rem;
+}
+
+/* 错误状态的输入框 */
+.inputError {
+  border-color: #e53e3e !important;
+  background-color: rgba(229, 62, 62, 0.05);
+}
+
+/* 错误文本 */
+.errorText {
+  color: #e53e3e;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+/* 提交错误消息 */
+.errorMessage {
+  background-color: rgba(229, 62, 62, 0.1);
+  color: #e53e3e;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  border-left: 3px solid #e53e3e;
+}
+
+/* 提交成功消息 */
+.successMessage {
+  background-color: rgba(72, 187, 120, 0.1);
+  color: #38a169;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  border-left: 3px solid #38a169;
+}
+
+/* 表单操作区 */
+.formActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* 提交按钮 */
+.submitButton {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #c53030;
+}
+
+.submitButton:disabled {
+  background-color: #e57373;
+  cursor: not-allowed;
+}
+
+/* 取消按钮 */
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #f7fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancelButton:hover {
+  background-color: #edf2f7;
+}
+
+.cancelButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* 论文列表容器 */
+.papersListContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 论文列表头部 */
+.papersHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* 论文列表标题 */
+.papersTitle {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 上传按钮 */
+.uploadButton {
+  padding: 0.6rem 1.2rem;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.uploadButton:hover {
+  background-color: #c53030;
+}
+
+/* 加载容器 */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  color: #718096;
+}
+
+/* 加载动画 */
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(229, 62, 62, 0.2);
+  border-radius: 50%;
+  border-top-color: #e53e3e;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 空状态 */
+.emptyState {
+  text-align: center;
+  padding: 3rem 0;
+  color: #718096;
+}
+
+.emptyStateButton {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.emptyStateButton:hover {
+  background-color: #c53030;
+}
+
+/* 论文列表 */
+.papersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 论文卡片 */
+.paperCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s;
+}
+
+.paperCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* 论文卡片头部 */
+.paperCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* 论文卡片标题 */
+.paperCardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  flex: 1;
+}
+
+/* 论文卡片操作 */
+.paperCardActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* 论文操作按钮 */
+.paperActionButton {
+  padding: 0.4rem 0.8rem;
+  background-color: #f7fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.paperActionButton:hover {
+  background-color: #edf2f7;
+}
+
+/* 下载按钮 */
+.downloadButton {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+}
+
+.downloadButton:hover {
+  background-color: #c53030;
+}
+
+/* 论文卡片元数据 */
+.paperCardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+/* 论文文件名 */
+.paperFileName {
+  display: flex;
+  align-items: center;
+}
+
+/* 论文上传日期 */
+.paperUploadDate {
+  display: flex;
+  align-items: center;
+}
+
+/* 论文卡片详情 */
+.paperCardDetails {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #edf2f7;
+}
+
+/* 论文摘要 */
+.paperAbstract {
+  margin-bottom: 1.5rem;
+}
+
+.paperAbstract h4,
+.paperKeywords h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin: 0 0 0.5rem 0;
+}
+
+.paperAbstract p,
+.paperKeywords p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .paperFormContainer,
+  .papersListContainer {
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .papersHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .submitButton,
+  .cancelButton {
+    width: 100%;
+  }
+  
+  .paperCardHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .paperCardActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* 登录提示样式 */
+.loginPrompt {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.loginLink {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: #e53e3e;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.loginLink:hover {
+  background-color: #c53030;
+}
+
+.registerPrompt {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-top: 0.5rem;
+}
+
+.registerLink {
+  color: #e53e3e;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.registerLink:hover {
+  color: #c53030;
+  text-decoration: underline;
+}

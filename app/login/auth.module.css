@@ -1,0 +1,98 @@
+/* 认证页面容器 */
+.authPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f7fafc;
+}
+
+/* 认证卡片 */
+.authCard {
+  width: 100%;
+  max-width: 480px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* 认证头部 */
+.authHeader {
+  padding: 2rem 2rem 1.5rem;
+  text-align: center;
+}
+
+/* Logo链接 */
+.logoLink {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e53e3e;
+  margin: 0;
+}
+
+/* 认证描述 */
+.authDescription {
+  font-size: 1rem;
+  color: #718096;
+  margin: 0;
+}
+
+/* 认证内容 */
+.authContent {
+  padding: 0 2rem 1.5rem;
+}
+
+/* 认证页脚 */
+.authFooter {
+  padding: 1.5rem 2rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #edf2f7;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+/* 认证切换按钮 */
+.authToggleButton {
+  background: none;
+  border: none;
+  color: #e53e3e;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.authToggleButton:hover {
+  text-decoration: underline;
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+  .authPageContainer {
+    padding: 1rem;
+  }
+  
+  .authCard {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+  .authHeader,
+  .authContent,
+  .authFooter {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

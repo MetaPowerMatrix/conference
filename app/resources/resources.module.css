@@ -1,0 +1,343 @@
+.resourcesPage {
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #8B2635 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.featuredSection {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.allResourcesSection {
+  padding: 80px 0;
+}
+
+.filtersSection {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.searchBox {
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.filters {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filterGroup label {
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  min-width: 150px;
+  transition: border-color 0.3s ease;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.resourcesList {
+  margin-top: 40px;
+}
+
+.loading,
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.resourceCard {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.resourceCard:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.resourceCard.featured {
+  border-color: var(--primary-color);
+  position: relative;
+}
+
+.resourceCard.featured::before {
+  content: '精选';
+  position: absolute;
+  top: -1px;
+  right: 20px;
+  background: var(--primary-color);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 0 0 8px 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.resourceHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.typeIcon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.resourceMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+.category {
+  background: var(--primary-color);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.type {
+  background: #e9ecef;
+  color: #495057;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.resourceTitle {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.resourceDescription {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.resourceInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+}
+
+.author {
+  color: #666;
+  font-weight: 500;
+}
+
+.date {
+  color: #999;
+  text-align: right;
+}
+
+.size {
+  color: #666;
+}
+
+.downloads {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-align: right;
+}
+
+.resourceActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.resourceActions .btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .featuredSection,
+  .allResourcesSection {
+    padding: 60px 0;
+  }
+  
+  .featuredGrid,
+  .resourcesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .filtersSection {
+    padding: 20px;
+  }
+  
+  .filters {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .filterGroup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
+  
+  .filterSelect {
+    min-width: auto;
+  }
+  
+  .resourceCard {
+    padding: 20px;
+  }
+  
+  .resourceHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .resourceMeta {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .resourceInfo {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  
+  .date,
+  .downloads {
+    text-align: left;
+  }
+  
+  .resourceActions {
+    justify-content: stretch;
+  }
+  
+  .resourceActions .btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .resourceCard {
+    padding: 15px;
+  }
+  
+  .resourceTitle {
+    font-size: 1.1rem;
+  }
+  
+  .resourceActions {
+    flex-direction: column;
+  }
+}
+
+/* Animation for loading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resourceCard {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Hover effects */
+.resourceCard:hover .typeIcon {
+  background: var(--primary-color);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.resourceCard:hover .resourceTitle {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}

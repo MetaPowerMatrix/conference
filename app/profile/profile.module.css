@@ -1,0 +1,226 @@
+/* 个人中心容器 */
+.profileContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 个人中心头部 */
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* 个人信息 */
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 用户姓名 */
+.profileName {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* 用户名 */
+.profileUsername {
+  font-size: 1rem;
+  color: #718096;
+  margin: 0.5rem 0 0 0;
+}
+
+/* 退出登录按钮 */
+.logoutButton {
+  padding: 0.6rem 1.2rem;
+  background-color: #f7fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.logoutButton:hover {
+  background-color: #e53e3e;
+  color: white;
+  border-color: #e53e3e;
+}
+
+/* 标签栏 */
+.profileTabs {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+/* 标签按钮 */
+.tabButton {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #718096;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.tabButton:hover {
+  color: #e53e3e;
+}
+
+/* 活动标签 */
+.activeTab {
+  color: #e53e3e;
+  border-bottom-color: #e53e3e;
+}
+
+/* 内容区域 */
+.profileContent {
+  min-height: 400px;
+}
+
+/* 用户信息容器 */
+.userInfoContainer {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+/* 部分标题 */
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 1.5rem 0;
+}
+
+/* 用户信息网格 */
+.userInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* 信息项 */
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 信息标签 */
+.infoLabel {
+  font-size: 0.9rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* 信息值 */
+.infoValue {
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+/* 加载容器 */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  color: #718096;
+}
+
+/* 加载动画 */
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(229, 62, 62, 0.2);
+  border-radius: 50%;
+  border-top-color: #e53e3e;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 错误容器 */
+.errorContainer {
+  max-width: 600px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+/* 错误消息 */
+.errorMessage {
+  background-color: rgba(229, 62, 62, 0.1);
+  color: #e53e3e;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  border-left: 3px solid #e53e3e;
+  text-align: left;
+}
+
+/* 重试按钮 */
+.retryButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.retryButton:hover {
+  background-color: #c53030;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 1.5rem;
+  }
+  
+  .profileHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .logoutButton {
+    align-self: flex-start;
+  }
+  
+  .profileTabs {
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+  
+  .tabButton {
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+  }
+  
+  .userInfoGrid {
+    grid-template-columns: 1fr;
+  }
+}

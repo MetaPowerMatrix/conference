@@ -1,0 +1,405 @@
+.schedulePage {
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.scheduleNav {
+  background: white;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+}
+
+.scheduleNav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.navTabs {
+  display: flex;
+  gap: 20px;
+}
+
+.navTab {
+  background: var(--bg-light);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 120px;
+}
+
+.navTab:hover {
+  border-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.navTab.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.tabDate {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.tabDay {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filters label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: white;
+  cursor: pointer;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.scheduleContent {
+  padding: 40px 0 80px;
+}
+
+.scheduleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.scheduleHeader h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.legendColor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.scheduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scheduleItem {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-left: 5px solid var(--border-color);
+}
+
+.scheduleItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.scheduleItem.keynote {
+  border-left-color: #C63734;
+}
+
+.scheduleItem.session {
+  border-left-color: #2E86AB;
+}
+
+.scheduleItem.workshop {
+  border-left-color: #A23B72;
+}
+
+.scheduleItem.break {
+  border-left-color: #F18F01;
+}
+
+.scheduleItem.networking {
+  border-left-color: #C73E1D;
+}
+
+.itemTime {
+  background: var(--bg-light);
+  padding: 25px 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.itemContent {
+  flex: 1;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.itemTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.bookmarkBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.bookmarkBtn:hover {
+  color: var(--primary-color);
+  background: rgba(198, 55, 52, 0.1);
+}
+
+.bookmarkBtn.bookmarked {
+  color: var(--primary-color);
+}
+
+.itemSpeaker {
+  font-weight: 500;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.itemLocation {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.itemDescription {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.itemType {
+  margin-top: 5px;
+}
+
+.typeTag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.mySchedule {
+  background: var(--bg-light);
+  padding: 60px 0;
+}
+
+.bookmarkedList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.bookmarkedItem {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.bookmarkedTime {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.bookmarkedTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.bookmarkedLocation {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.removeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.removeBtn:hover {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+@media (max-width: 768px) {
+  .scheduleNav .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .navTabs {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .navTab {
+    min-width: 100px;
+    padding: 12px 20px;
+  }
+  
+  .scheduleHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .legend {
+    gap: 15px;
+  }
+  
+  .scheduleItem {
+    flex-direction: column;
+  }
+  
+  .itemTime {
+    min-width: auto;
+    padding: 15px 20px;
+    text-align: left;
+  }
+  
+  .itemContent {
+    padding: 20px;
+  }
+  
+  .itemTitle {
+    font-size: 1.1rem;
+  }
+  
+  .bookmarkedList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .navTab {
+    min-width: 80px;
+    padding: 10px 15px;
+  }
+  
+  .tabDate {
+    font-size: 0.8rem;
+  }
+  
+  .tabDay {
+    font-size: 1rem;
+  }
+  
+  .itemContent {
+    padding: 15px;
+    gap: 8px;
+  }
+  
+  .itemTitle {
+    font-size: 1rem;
+  }
+  
+  .legend {
+    gap: 10px;
+  }
+  
+  .legendItem {
+    font-size: 0.8rem;
+  }
+}
