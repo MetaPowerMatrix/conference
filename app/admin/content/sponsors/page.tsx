@@ -8,7 +8,7 @@ import { getAuthToken } from '@/services/api';
 const API_BASE_URL = 'http://localhost:5001/api';
 
 // 项目根路径配置
-const PROJECT_ROOT_PATH = process.env.PROJECT_ROOT_PATH || '/Users/shiyong/Downloads/和顺英华/医学学术会议_网站_小程序';
+const PROJECT_ROOT_PATH = process.env.PROJECT_ROOT_PATH || '';
 
 export default function SponsorsContentPage() {
   // 页面文件路径，使用配置的项目根路径
