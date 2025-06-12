@@ -29,7 +29,10 @@
 
 /* 英雄区 */
 .hero {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+  background-image: url('/con-bk13.png');
+  background-size: cover;
+  background-position: center;
+  /* background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%); */
   color: white;
   padding: 120px 0 80px;
   text-align: center;

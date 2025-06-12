@@ -3,7 +3,9 @@
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #8B2635 100%);
+  background-image: url('/con-bk18.png');
+  background-size: cover;
+  background-position: center;
   color: white;
   padding: 80px 0;
   text-align: center;
